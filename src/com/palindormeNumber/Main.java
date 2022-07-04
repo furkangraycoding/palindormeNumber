@@ -3,7 +3,7 @@ package com.palindormeNumber;
 public class Main {
 
     public static void main(String[] args) {
-        String s="100742";
+        String s="19099";
         int readNumber = -1;
         try {
             readNumber = Integer.parseInt(s);
@@ -44,7 +44,7 @@ public class Main {
             return (int)(thresh-absTempResult);
 
         }
-        else if(absTempResult>thresh/2 && length%2==1){
+        else if(absTempResult>thresh/2 && length%2==1 && b){
             return (int)(thresh-absTempResult);
 
         }
