@@ -3,7 +3,7 @@ package com.palindormeNumber;
 public class Main {
 
     public static void main(String[] args) {
-        String s="19897";
+        String s="100742";
         int readNumber = -1;
         try {
             readNumber = Integer.parseInt(s);
@@ -39,9 +39,12 @@ public class Main {
         int absTempResult=Math.abs(tempResult);
         int digit=countInteger(tempResult);
         double thresh= (int) (Math.pow(10,digit-1)*11);
-        char a=s.charAt(length / 2);
         boolean b = (int) (s.charAt(length / 2)) == '9';
-        if(absTempResult>thresh/2 && length%2==0 || b){
+        if(absTempResult>thresh/2 && length%2==0){
+            return (int)(thresh-absTempResult);
+
+        }
+        else if(absTempResult>thresh/2 && length%2==1){
             return (int)(thresh-absTempResult);
 
         }
